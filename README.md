@@ -1,5 +1,3 @@
-PROYECTO ARO (AGRICULTURE & RURAL OPTIMIZATION)
-
 ARO del celta antiguo, significa “Tierra arable” o “Campo de labranza” y es un proyecto para ayudar en la gestión de un entorno 
 agrícola en el medio rural, ya sea un terreno cultivable como un vivero de montaña, mediante la automatización de previsiones 
 meteorológicas y de cultivo (condiciones para el riego, abonado, estado del suelo.
@@ -58,8 +56,8 @@ Opciones:
  	-a, --actual   	  Obtiene y muestra el tiempo actual.
  	-p, --prevision 	Obtiene y muestra la previsión a 3 días.
  	-t, --tormenta 	  Evaluación de previsión de tormenta a 2 días.
-  -d, --dana	      Evaluación de previsión de entrada de DANA a 14 días.
-  -h, --help     	  Muestra este mensaje de ayuda.
+  	-d, --dana	      Evaluación de previsión de entrada de DANA a 14 días.
+  	-h, --help     	  Muestra este mensaje de ayuda.
 
 
 VIVERO (En pensamiento…)
