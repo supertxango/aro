@@ -1,3 +1,10 @@
+// --------------------------------------------------------------------------
+// Módulo: open_meteo_get
+// Descripción: Incluye funciones para la construcción de la URL con las
+// variables que se desean obtener de la API de Open-Meteo, solicitan la
+// petición y devuelven un JSON
+// --------------------------------------------------------------------------
+
 #ifndef OPEN_METEO_GET_H
 #define OPEN_METEO_GET_H
 
@@ -21,13 +28,14 @@ typedef struct {
 char* fetch_open_meteo_data(const char *url);
 
 /**
- * @brief Construye la URL de consulta para los datos actuales, horarios, diarios o niveles de presión.
+ * @brief Construye la URL de consulta para los datos actuales, horarios o diarios.
  * @param latitude Latitud en grados decimales.
  * @param longitude Longitud en grados decimales.
  * @param hourly_vars Cadena con variables horarias separadas por coma (opcional, puede ser NULL).
  * @param daily_vars Cadena con variables diarias separadas por coma (opcional, puede ser NULL).
  * @param current_vars Cadena con variables actuales separadas por coma (opcional, puede ser NULL).
  * @param forecast_days Número de días de predicción (p. ej. 1, 3, 7).
+ * @param past_days Número de días pasados a la fecha de petición actual (p. ej. 1, 3, 7).
  * @param buffer Buffer de salida donde se escribirá la URL generada.
  * @param buffer_size Tamaño del buffer asignado.
  * @return true si la URL se construyó correctamente, false si excedió el tamaño del buffer.

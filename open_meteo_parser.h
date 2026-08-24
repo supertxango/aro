@@ -1,3 +1,12 @@
+// ---------------------------------------------------------------------------------
+// Módulo: open_meteo_parser
+// Descripción: Incluye funciones para procesar el JSON recibido de la petición
+// a la API de Open Meteo para añadirlo a las estructuras de datos correspondientes
+// que alamcenarán los datos meteorológicos para poder hacer cálculos.
+// Adicionalmente incluye las funciones para liberación de memoria una vez acabado
+// el proceso de los datos.
+// ---------------------------------------------------------------------------------
+
 #ifndef OPEN_METEO_PARSER_H
 #define OPEN_METEO_PARSER_H
 

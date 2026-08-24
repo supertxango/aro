@@ -4,9 +4,9 @@
 #include <stdbool.h>
 #include <time.h>
 
-// -------------------------------------------------------------
-// 1. Datos meteorológicos actuales (Current Weather)
-// -------------------------------------------------------------
+// --------------------------------------------------------------------------
+// 1. Variables para almacenar datos meteorológicos actuales (Current Weather)
+// ---------------------------------------------------------------------------
 typedef struct {
     float temperature_2m;              	// Temperatura a 2m (°C)
     int relative_humidity_2m;          	// Humedad relativa a 2m (%)
@@ -24,9 +24,9 @@ typedef struct {
     time_t timestamp;                  	// Hora del dato
 } CurrentWeather;
 
-// -------------------------------------------------------------
-// 3. Predicción horaria / métricas convectivas avanzadas (1 hora)
-// -------------------------------------------------------------
+// ------------------------------------------------------------------------
+// 2. Variables para almacenar datos de predicción horaria (Hourly Weather)
+// ------------------------------------------------------------------------
 typedef struct {
 	int count;						   	// Número total de horas incluidos en la serie
     char **time;                  		// Fecha y hora del intervalo
@@ -78,9 +78,9 @@ typedef struct {
     float *freezing_level_height;        // Altura nivel de congelación (m)
 } HourlyWeather;
 
-// -------------------------------------------------------------
-// 4. Resumen diario (Daily Weather) (1 día)
-// -------------------------------------------------------------
+// -------------------------------------------------------------------
+// 3. Variables para almacenar datos de resumen diario (Daily Weather)
+// -------------------------------------------------------------------
 typedef struct {
 	int count;						   	// Número total de días incluidos en la serie
     char **time;                        // Cadena fecha "YYYY-MM-DD"
@@ -102,9 +102,9 @@ typedef struct {
     float *updraft_max;                  // Corriente ascendente máxima
 } DailyWeather;
 
-// -------------------------------------------------------------
-// 5. Alta resolución de 15 minutos (Minutely 15) (1 intervalo)
-// -------------------------------------------------------------
+// --------------------------------------------------------------------------------
+// 4. Variables para almacenar datos de alta resolución de 15 minutos (Minutely 15)
+// --------------------------------------------------------------------------------
 typedef struct {
 	int count;						   	// Número total de periodos de 15 minutos incluidos en la serie
     time_t timestamp;                   // Fecha y hora exacta del intervalo
