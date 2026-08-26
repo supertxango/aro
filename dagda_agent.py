@@ -15,10 +15,14 @@ from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText 
 from google import genai
+from dotenv import load_dotenv
 
 # ============================================================
 # CONFIGURACIÓN
 # ============================================================
+
+# Carga las variables desde el archivo .env de la carpeta local
+load_dotenv()
 
 # Lee la clave desde las variables de entorno del sistema:
 GEMINI_API_KEY = os.environ.get("GCP_API_KEY")

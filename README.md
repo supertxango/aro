@@ -87,12 +87,14 @@ Requisitos:
 
 Sistema operativo: Linux (Debian, Ubuntu o similar)
 Intérprete: python3
-Librerías: Google AI Studio para Python.
+Librerías: Google AI Studio y dotenv para Python.
 En Debian/Ubuntu puedes instalar las dependencias necesarias con: 
    $ pip install google-genai
+   $ pip install python-dotenv
 A partir de Debian 12, Python protege el entorno global del sistema mediante la directiva EXTERNALLY-MANAGED (PEP 668), por lo que la forma correcta y recomendada de instalar 
 librerías de Python es mediante un entorno virtual (venv). Si no quieres complicarte la vida con entornos virtuales puedes usar la opción --break-system-packages de pip.
    $ pip install google-genai --break-system-packages
+   $ pip install python-dotenv --break-system-packages
 
 Es requisito disponer de usuario en Google AI Studio y generar una API KEY.
 Para poder ejecutar este módulo es necesario tener instalado también el módulo Dagda Analysis
@@ -101,14 +103,14 @@ Instalación:
 
 Descargar los ficheros run_dagda.sh y dagda_agent.py
 
-Crear las variables de entorno necesarias para la ejecución de dagda_agent.py
-  export GCP_API_KEY="TU_API_KEY"
-  export ARO_EMAIL_REMITENTE="CORREO DEL REMITENTE"
-  export ARO_EMAIL_PASSWORD="PASSWORD O TOKEN DEL REMITENTE"
-  export ARO_EMAIL_DESTINATARIO="CORREO DEL DESTINATARIO"
+En el mismo directorio donde se va a ejecutar dagda_agent.py crear un fichero .env con las variables de entorno necesarias:
+  GCP_API_KEY="TU_API_KEY"
+  ARO_EMAIL_REMITENTE="CORREO DEL REMITENTE"
+  ARO_EMAIL_PASSWORD="PASSWORD O TOKEN DEL REMITENTE"
+  ARO_EMAIL_DESTINATARIO="CORREO DEL DESTINATARIO"
 
 Dar permisos de ejecución a run_dagda.sh
-chmod +x /tu_directorio/run_dagda.sh 
+   $ chmod +x /tu_directorio/run_dagda.sh 
 
 Ejecución:
 
